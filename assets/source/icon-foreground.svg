@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Adaptive-icon foreground: droplet kept inside the ~66% safe zone -->
+  <g transform="translate(512 512) scale(4.6) translate(-50 -52)">
+    <path d="M50 12 C 70 42, 82 56, 82 69 A 32 32 0 1 1 18 69 C 18 56 30 42 50 12 Z"
+          fill="#ff4785"/>
+    <ellipse cx="40" cy="66" rx="9" ry="13" fill="#ffffff" opacity="0.35"/>
+  </g>
+</svg>

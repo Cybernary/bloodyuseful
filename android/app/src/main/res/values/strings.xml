@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">BloodyUseful</string>
+    <string name="title_activity_main">BloodyUseful</string>
+    <string name="package_name">com.bloodyuseful.app</string>
+    <string name="custom_url_scheme">com.bloodyuseful.app</string>
+</resources>

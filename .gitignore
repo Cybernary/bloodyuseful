@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dev-dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor / OS / tooling
+.DS_Store
+.vscode/
+.idea/
+.claude/
+
+# Android build artifacts
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+android/.idea/
+android/app/src/main/assets/public/
+android/app/src/main/assets/capacitor.config.json
+android/app/src/main/assets/capacitor.plugins.json
+
+# Packaged output
+*.apk
+*.aab
+bloody-useful-web.zip

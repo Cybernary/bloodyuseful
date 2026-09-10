@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2732" height="2732" viewBox="0 0 2732 2732">
+  <rect width="2732" height="2732" fill="#1a1a1a"/>
+  <g transform="translate(1366 1150) scale(9) translate(-50 -52)">
+    <path d="M50 12 C 70 42, 82 56, 82 69 A 32 32 0 1 1 18 69 C 18 56 30 42 50 12 Z"
+          fill="#ffffff"/>
+    <ellipse cx="40" cy="66" rx="9" ry="13" fill="#ffffff" opacity="0.45"/>
+  </g>
+  <text x="1366" y="1760" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="180" font-weight="bold">
+    <tspan fill="#ffffff">Bloody</tspan><tspan fill="#ff85b8">Useful</tspan>
+  </text>
+</svg>
