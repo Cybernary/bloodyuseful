@@ -6,6 +6,8 @@ average cycle, period length, fertile window and the likely date of your next pe
 Everything stays on your device — data lives in `localStorage` and never touches a server.
 The same code runs as a web app and as an Android app (via Capacitor).
 
+You can check it working on https://bloody-useful.sanchezdelrio.dev/
+
 ## Features
 
 - Tap a day to cycle its flow: none → light → medium → heavy.
