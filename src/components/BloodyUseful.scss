@@ -299,6 +299,26 @@
   z-index: 1000;
 }
 
+.month-year-picker.info-modal {
+  width: 520px;
+
+  .info-body {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .info-section {
+    margin-bottom: 1.35rem;
+
+    h4 {
+      margin-bottom: 0.4rem;
+    }
+
+    p {
+      line-height: 1.65;
+    }
+  }
+}
+
 .month-year-picker {
   background: white;
   border-radius: 8px;
