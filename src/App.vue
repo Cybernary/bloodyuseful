@@ -3,35 +3,29 @@
   <BloodyUseful v-else />
 </template>
 
-<script>
-import { Capacitor } from '@capacitor/core'
-import BloodyUseful from './components/BloodyUseful.vue'
-import SplashScreen from './components/SplashScreen.vue'
+<script setup>
+import { ref } from 'vue';
+import { Capacitor } from '@capacitor/core';
+import BloodyUseful from './components/BloodyUseful.vue';
+import SplashScreen from './components/SplashScreen.vue';
 
-export default {
-  name: 'App',
-  components: { BloodyUseful, SplashScreen },
-  data() {
-    const isWeb = !Capacitor.isNativePlatform()
-    let splashSeen = false
-    try {
-      splashSeen = localStorage.getItem('splashSeen') === '1'
-    } catch (e) {
-      splashSeen = false
-    }
-    return {
-      showSplash: isWeb ? !splashSeen : true
-    }
-  },
-  methods: {
-    dismissSplash() {
-      this.showSplash = false
-      try {
-        localStorage.setItem('splashSeen', '1')
-      } catch (e) {
-        return
-      }
-    }
+function initialSplash() {
+  if (Capacitor.isNativePlatform()) return true;
+  try {
+    return localStorage.getItem('splashSeen') !== '1';
+  } catch (e) {
+    return true;
+  }
+}
+
+const showSplash = ref(initialSplash());
+
+function dismissSplash() {
+  showSplash.value = false;
+  try {
+    localStorage.setItem('splashSeen', '1');
+  } catch (e) {
+    return;
   }
 }
 </script>
