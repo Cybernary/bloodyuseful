@@ -67,7 +67,7 @@ MIT — see [LICENSE](LICENSE).
 
 [English](#bloodyuseful) · **Castellano**
 
-Un pequeño rastreador de ciclo menstrual y privado. Registra tu sangrado en un calendario y
+Un pequeño calendario de ciclo menstrual y privado. Registra tu sangrado en un calendario y
 calcula tu ciclo medio, la duración del periodo, la ventana fértil y la fecha probable de tu
 próximo periodo.
 
@@ -125,4 +125,4 @@ exporta una copia si quieres conservarlos.
 
 ## Licencia
 
-MIT — consulta [LICENSE](LICENSE).
+MIT — consulta [la LICENCIA](LICENSE).
