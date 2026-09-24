@@ -8,7 +8,6 @@ import {
   monthNames,
   weekdayNames
 } from '../lib/dates.js';
-import { ovulationStart } from '../lib/cycle.js';
 
 const flowLevels = {
   0: 'bg-white',
@@ -46,7 +45,7 @@ export function useCalendar({ currentLanguage, periodData, predictedPeriod, ovul
 
     const classes = ['calendar-day', flowLevels[dayData.flow || 0]];
 
-    if (dayData.ovulation || ovulationDates.value.has(dateStr)) {
+    if (ovulationDates.value.has(dateStr)) {
       classes.push('ovulation');
     }
 
@@ -75,7 +74,7 @@ export function useCalendar({ currentLanguage, periodData, predictedPeriod, ovul
       label += `, ${flowLabels[dayData.flow]}`;
     }
 
-    if (dayData.ovulation || ovulationDates.value.has(dateStr)) {
+    if (ovulationDates.value.has(dateStr)) {
       label += `, ${t('ovulationWindow')}`;
     }
 
@@ -105,16 +104,12 @@ export function useCalendar({ currentLanguage, periodData, predictedPeriod, ovul
     const currentFlow = periodData.value[dateStr]?.flow || 0;
     const newFlow = (currentFlow + 1) % 4;
 
-    const newData = {
-      ...periodData.value,
-      [dateStr]: { flow: newFlow, ovulation: false }
-    };
+    const newData = { ...periodData.value };
 
-    if (newFlow === 1) {
-      const ovulationDateStr = formatDate(ovulationStart(clickedDate));
-      if (ovulationDateStr) {
-        newData[ovulationDateStr] = { ...newData[ovulationDateStr], ovulation: true };
-      }
+    if (newFlow === 0) {
+      delete newData[dateStr];
+    } else {
+      newData[dateStr] = { flow: newFlow };
     }
 
     periodData.value = newData;
